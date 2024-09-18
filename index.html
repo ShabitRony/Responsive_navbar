@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodinGlab</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-primary">
+      <!-- Nav BAr -->
+      <nav
+        class="container d-flex justify-content-between p-2 align-items-center position-relative"
+      >
+        <div class="text-white fs-3">Codinglab</div>
+
+        <div class="d-none d-md-flex gap-2 text-white">
+          <a href="https://Home.com">Home</a>
+          <a href="https://About.com">About</a>
+          <a href="https://Portfolio.com">Portfolio</a>
+          <a href="https://Services.com">Services</a>
+          <a href="https://COntact.com">Contact</a>
+        </div>
+
+        <div
+          class="d-grid d-md-none gap-2 text-white position-absolute top-0 end-0 mt-5 mx-auto w-100 bg-success p-2 rounded d-grid justify-content-center responsive_nav"
+          id="mobile_nav"
+        >
+          <a href="https://Home.com">Home</a>
+          <a href="https://About.com">About</a>
+          <a href="https://Portfolio.com">Portfolio</a>
+          <a href="https://Services.com">Services</a>
+          <a href="https://COntact.com">Contact</a>
+        </div>
+
+        <div>
+          <div class="d-none d-md-flex input-group">
+            <input type="text" class="form-control" placeholder="Search" />
+          </div>
+          <button class="btn btn-danger d-flex d-md-none" id="htm_btn">
+            Ham
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let htm_btn = document.querySelector("#htm_btn");
+
+      let mobile_nav = document.querySelector("#mobile_nav");
+
+      htm_btn.addEventListener("click", () => {
+        if (mobile_nav.classList.contains("responsive_nav")) {
+          mobile_nav.classList.remove("responsive_nav");
+        } else {
+          mobile_nav.classList.add("responsive_nav");
+        }
+      });
+    </script>
+  </body>
+</html>
